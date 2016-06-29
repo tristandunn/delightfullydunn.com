@@ -6,6 +6,12 @@ body {
   line-height: 1;
 }
 
+@media screen and (max-width: 512px) {
+  body {
+    padding: 16px;
+  }
+}
+
 a {
   color: #FFF;
   text-decoration: none;
@@ -38,12 +44,12 @@ header {
 nav {
   ul {
     list-style: none;
-    width: 512px;
     margin: 48px auto;
     padding: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     line-height: 1.4;
+    max-width: 512px;
   }
 
   li {
@@ -58,9 +64,18 @@ nav {
   }
 }
 
+@media screen and (max-width: 512px) {
+  nav {
+    li {
+      margin: 0 0 0 16px;
+      font-size: 16px;
+    }
+  }
+}
+
 section {
-  width: 512px;
   margin: 0 auto;
+  max-width: 512px;
 
   h1,
   h2 {
@@ -92,9 +107,55 @@ section {
   }
 }
 
+#slideshow {
+  position: relative;
+  width: 100%;
+  margin: 48px auto;
+  max-width: 640px;
+  max-height: 480px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    max-width: 640px;
+    max-height: 480px;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+
+    &:nth-child(1) {
+      position: static;
+      animation-name: image-1;
+    }
+
+    &:nth-child(2) {
+      animation-name: image-2;
+    }
+
+    &:nth-child(3) {
+      animation-name: image-3;
+    }
+
+    &:nth-child(4) {
+      animation-name: image-4;
+    }
+
+    &:nth-child(5) {
+      animation-name: image-5;
+    }
+
+    &:nth-child(6) {
+      animation-name: image-6;
+    }
+  }
+}
+
 footer {
-  top: auto;
-  bottom: 36px;
+  margin: 48px 0;
+
   h1 {
     font-size: 22px;
     line-height: 1.4;
@@ -114,4 +175,64 @@ h1 {
     display: block;
     opacity: 0.8;
   }
+}
+
+@keyframes image-1 {
+  0%             { opacity: 1; }
+  16.666666667%  { opacity: 0; }
+  33.333333334%  { opacity: 0; }
+  50.000000001%  { opacity: 0; }
+  66.666666668%  { opacity: 0; }
+  83.333333335%  { opacity: 0; }
+  100%           { opacity: 1; }
+}
+
+@keyframes image-2 {
+  0%             { opacity: 0; }
+  16.666666667%  { opacity: 1; }
+  33.333333334%  { opacity: 0; }
+  50.000000001%  { opacity: 0; }
+  66.666666668%  { opacity: 0; }
+  83.333333335%  { opacity: 0; }
+  100%           { opacity: 0; }
+}
+
+@keyframes image-3 {
+  0%             { opacity: 0; }
+  16.666666667%  { opacity: 0; }
+  33.333333334%  { opacity: 1; }
+  50.000000001%  { opacity: 0; }
+  66.666666668%  { opacity: 0; }
+  83.333333335%  { opacity: 0; }
+  100%           { opacity: 0; }
+}
+
+@keyframes image-4 {
+  0%             { opacity: 0; }
+  16.666666667%  { opacity: 0; }
+  33.333333334%  { opacity: 0; }
+  50.000000001%  { opacity: 1; }
+  66.666666668%  { opacity: 0; }
+  83.333333335%  { opacity: 0; }
+  100%           { opacity: 0; }
+}
+
+@keyframes image-5 {
+  0%             { opacity: 0; }
+  16.666666667%  { opacity: 0; }
+  33.333333334%  { opacity: 0; }
+  50.000000001%  { opacity: 0; }
+  66.666666668%  { opacity: 1; }
+  83.333333335%  { opacity: 0; }
+  100%           { opacity: 0; }
+}
+
+@keyframes image-6 {
+  0%             { opacity: 0; }
+  16.666666667%  { opacity: 0; }
+  33.333333334%  { opacity: 0; }
+  50.000000001%  { opacity: 0; }
+  66.666666668%  { opacity: 0; }
+  83.333333335%  { opacity: 1; }
+  100%           { opacity: 0; }
 }
