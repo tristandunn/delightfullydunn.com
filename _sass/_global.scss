@@ -49,16 +49,16 @@ nav {
   ul {
     list-style: none;
     margin: 48px auto;
-    padding: 24px;
+    padding: 24px 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     line-height: 1.4;
-    max-width: 512px;
+    max-width: 616px;
   }
 
   li {
-    margin: 0 0 0 48px;
-    font-size: 22px;
+    margin: 0 0 0 32px;
+    font-size: 20px;
     font-family: "Courgette", cursive;
     display: inline-block;
 
@@ -68,11 +68,24 @@ nav {
   }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 640px) {
   nav {
     li {
       margin: 0 0 0 16px;
-      font-size: 16px;
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 512px) {
+  nav {
+    ul {
+      padding: 24px 0;
+    }
+
+    li {
+      margin: 0 0 0 10px;
+      font-size: 13px;
     }
   }
 }
